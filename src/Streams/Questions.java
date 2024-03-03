@@ -1,3 +1,5 @@
+package Streams;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -52,7 +54,7 @@ public class Questions {
 
         // 7
         // Count Transaction by there type
-        Map<String, Long> cntByType = allTransactions.stream().collect(Collectors.groupingBy(Transaction :: getType, Collectors.counting()));
+        Map<String, Long> cntByType = allTransactions.stream().collect(Collectors.groupingBy(Transaction:: getType, Collectors.counting()));
         System.out.println(cntByType);
 //      In this code:
 //      We use the groupingBy() collector to group transactions by their type.
@@ -70,7 +72,7 @@ public class Questions {
 
         // 10
         // Total amount by name
-        Map<String, Double> totalByName = allTransactions.stream().collect(Collectors.groupingBy(Transaction :: getName, Collectors.summingDouble(value -> value.getAmount())));
+        Map<String, Double> totalByName = allTransactions.stream().collect(Collectors.groupingBy(Transaction:: getName, Collectors.summingDouble(value -> value.getAmount())));
         System.out.println(totalByName);
     }
 }
