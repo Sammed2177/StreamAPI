@@ -1,7 +1,6 @@
 package Comparator;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
@@ -22,28 +21,28 @@ public class ComparatorExample {
         // there are two methods by which we can do that
         // 1. By creating a class
         // Suppose I need to do comparison based on the employee name then I will create a class named nameComparator
-        // Inside nameComparator will write the logic inside the overwidden method compare();
+        // Inside nameComparator will write the logic inside the overridden method compare();
 
         // System.out.println(employeeArrayList);
 
-        // for sorting based on the employeeName we can call sort method on the collections class and pass collection object and comparator object as a argument
+        // for sorting based on the employeeName we can call sort method on the collections class and pass collection object and comparator object as argument
         // Collections.sort(employeeArrayList, new NameComparator());
 
         System.out.println(employeeArrayList);
 
-        // hence we can create comparator class based on the field on which i need to do comparison
+        // hence we can create comparator class based on the field on which I need to do comparison
         // but there is another way by which we achieve the same result
         // Lets look into it
 
         // 2
         // we can use comparing method of the comparator class
         // using this method we don't have to explicitly create a comparator class based the on the given key
-        // this is very useful method when we can going to do a comparison on a particular key for only one time
+        // this is very useful method when we are going to do a comparison on a particular key for only one time
         // comparing method takes "keyExtractor Function" argument
         // keyExtractor function is nothing but the method which will return a key or a value on which we need to perform sorting on
 
         // == Collections.sort(employeeArrayList, Comparator.comparing(Employee :: getId));
-        // In above example we didnt have to create a IdComparator class explicitly
+        // In above example we didn't have to create a IdComparator class explicitly
 
         // Besides only comparing method we have many methods which we can use they are listed bellow
 
@@ -52,7 +51,7 @@ public class ComparatorExample {
         // then we can use thenComparing() method
         // example
         // Collections.sort(employeeArrayList, Comparator.comparing(Employee :: getId).thenComparing(Employee :: getName));
-        // using above method we can sort the collection based on the id first and then we can sort it based on the name
+        // using above method we can sort the collection based on the id first, and then we can sort it based on the name
 
         // handling nulls
         // nullsFirst() and nullsLast()
